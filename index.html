@@ -27,6 +27,20 @@
         counter.textContent = currentCount;
       }
     });
+
+    // Load the counter value from localStorage
+    let currentCount = parseInt(localStorage.getItem('counterValue')) || 1; 
+    counter.textContent = currentCount;
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        currentCount++;
+        counter.textContent = currentCount;
+
+        // Save the updated counter value to localStorage
+        localStorage.setItem('counterValue', currentCount); 
+      }
+    });
   </script>
 
   <h2>Exercise List</h2>
