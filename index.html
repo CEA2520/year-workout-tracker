@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goal Tracker</title>
+</head>
+<body>
+
+  <h1>Goal</h1>
+  <p>Do x amount of each workout where x is the number on the counter. make sure to check the counter off at the end of each day!</p>
+
+<p>Do this workout daily for a year</p>
+  <h2>Day Counter</h2>
+
+  <p>Counter Value: <span id="counter">1</span></p>
+
+  <input type="checkbox" id="incrementCheckbox">
+  <label for="incrementCheckbox">Increment Counter</label>
+
+  <script>
+    const checkbox = document.getElementById('incrementCheckbox');
+    const counter = document.getElementById('counter');
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        let currentCount = parseInt(counter.textContent);
+        currentCount++;
+        counter.textContent = currentCount;
+      }
+    });
+  </script>
+
+  <h2>Exercise List</h2>
+  <ol>
+    <li>Push up</li>
+    <li>Pull up</li>
+    <li>Sit up</li>
+    <li>Side crunch left</li>
+    <li>Side crunch right</li>
+    <li>Leg raise</li>
+    <li>Squat</li>
+    <li>Calf raise</li>
+  </ol>
+
+
+</body>
+''<footer>
+  <p>buy me a coffee link goes here</p>
+</footer>''
+</html>
